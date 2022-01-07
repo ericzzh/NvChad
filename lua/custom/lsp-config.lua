@@ -81,6 +81,11 @@ M.setup_lsp = function(on_attach, capabilities)
                         }
                     }
                 }
+            elseif lang == "rust_analyzer" then
+              -- use default
+                lspconf[lang].setup {
+                    on_attach = custom_on_attach,
+                }
             else
                 lspconf[lang].setup {
                     on_attach = custom_on_attach,
