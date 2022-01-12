@@ -96,5 +96,21 @@ M.setup_lsp = function(on_attach, capabilities)
     end
 
     setup_servers()
+
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+      vim.lsp.diagnostic.on_publish_diagnostics, {
+        -- Enable underline, use default values
+        underline = false,
+        -- Enable virtual text, override spacing to 4
+        virtual_text = false,
+        -- Use a function to dynamically turn signs off
+        -- and on, using buffer local variables
+        -- signs = function(bufnr, client_id)
+        --   return vim.bo[bufnr].show_signs == false
+        -- end,
+        -- Disable a feature
+        -- update_in_insert = false,
+      }
+    )
 end
 return M
