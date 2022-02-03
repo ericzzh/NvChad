@@ -57,7 +57,7 @@ M.setup_lsp = function(on_attach, capabilities)
     local function setup_servers()
         local lspconf = require("lspconfig")
 
-        local servers = {'gopls', 'tsserver','sumneko_lua', 'rust_analyzer'}
+        local servers = {'gopls', 'tsserver','sumneko_lua', 'rust_analyzer','clangd'}
         for _, lang in ipairs(servers) do
 
             if lang == "sumneko_lua" then
@@ -81,7 +81,8 @@ M.setup_lsp = function(on_attach, capabilities)
                         }
                     }
                 }
-            elseif lang == "rust_analyzer" then
+            elseif lang == "rust_analyzer"
+                or lang == "clangd" then
               -- use default
                 lspconf[lang].setup {
                     on_attach = custom_on_attach,
