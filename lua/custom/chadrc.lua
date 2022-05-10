@@ -24,4 +24,13 @@ M.plugins = {
      }
   },
 }
+
+M.options = {
+   -- load your options here or load module with options1
+   user = function() 
+     local opt = vim.opt
+     opt.fileencodings="utf-8,sjis,cp932,default"
+   end,
+
+}
 return M
