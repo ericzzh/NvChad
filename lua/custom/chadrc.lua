@@ -17,6 +17,11 @@ M.plugins = {
             width = 35,
          },
       },
-  }
+  },
+  user = {
+     ["sbdchd/neoformat"] = {
+       cmd = "Neoformat"
+     }
+  },
 }
 return M
