@@ -57,7 +57,7 @@ M.setup_lsp = function(on_attach, capabilities)
     local function setup_servers()
         local lspconf = require("lspconfig")
 
-        local servers = {'gopls', 'tsserver','sumneko_lua', 'rust_analyzer','clangd', 'dartls'}
+        local servers = {'gopls', 'tsserver','sumneko_lua', 'rust_analyzer','clangd', 'dartls', 'kotlin_language_server', 'sourcekit'}
         for _, lang in ipairs(servers) do
 
             if lang == "sumneko_lua" then
