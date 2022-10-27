@@ -1,3 +1,7 @@
+if vim.g.vscode then
+  return
+end
+
 vim.defer_fn(function()
   pcall(require, "impatient")
 end, 0)
