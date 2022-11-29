@@ -15,7 +15,6 @@ M.mappings = {
       ["gd"] = {"<cmd>Telescope lsp_definitions<cr>", "definition list"},
       ["gi"] = {"<cmd>Telescope lsp_implementations<cr>", "implementation list"},
       ["gr"] = {"<cmd>Telescope lsp_references<cr>", "code reference list"},
-      ["ge"] = {"<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>", "show line diagnostics"},
       ["<leader>cr"] = {"<cmd>'<,'> lua vim.lsp.buf.range_code_action()<cr>", "code range actions"},
       ["<leader>el"] = {"<cmd>Telescope diagnostics<cr>", "Telescope diagnostics"},
       ["<leader>lo"] = {"<cmd>Telescope lsp_document_symbols<cr>", "Telescope document symbols"},
@@ -54,14 +53,8 @@ M.plugins = {
           end
           local b = null_ls.builtins
           local sources = {
-             -- webdev stuff
-             -- b.formatting.deno_fmt,
              b.formatting.prettier,
-             -- Lua
-             -- b.formatting.stylua,
-             -- Shell
-             -- b.formatting.shfmt,
-             -- b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
+             b.formatting.gofmt,
           }
           null_ls.setup {
              debug = true,
