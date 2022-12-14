@@ -15,12 +15,18 @@ M.mappings = {
       ["gd"] = {"<cmd>Telescope lsp_definitions<cr>", "definition list"},
       ["gi"] = {"<cmd>Telescope lsp_implementations<cr>", "implementation list"},
       ["gr"] = {"<cmd>Telescope lsp_references<cr>", "code reference list"},
-      ["<leader>cr"] = {"<cmd>'<,'> lua vim.lsp.buf.range_code_action()<cr>", "code range actions"},
       ["<leader>el"] = {"<cmd>Telescope diagnostics<cr>", "Telescope diagnostics"},
       ["<leader>lo"] = {"<cmd>Telescope lsp_document_symbols<cr>", "Telescope document symbols"},
       ["<leader>lwo"] = {"<cmd>Telescope lsp_workspace_symbols<cr>", "Telescope workspace symbols"},
-    }
-
+    },
+    v = {
+      ["<leader>ca"] = {
+        function()
+          vim.lsp.buf.code_action()
+        end,
+        "lsp code_action",
+      },
+    },
   }
 }
 M.plugins = {
