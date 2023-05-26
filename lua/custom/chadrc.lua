@@ -42,7 +42,15 @@ M.plugins = {
   --     cmd = "Neoformat"
   -- },
 
-  ["kyazdani42/nvim-tree.lua"] = {
+  -- ["kyazdani42/nvim-tree.lua"] = {
+  --     override_options = {
+  --        view = {
+  --           width = 35,
+  --        },
+  --     }
+  -- },
+
+  ["nvim-tree/nvim-tree.lua"] = {
       override_options = {
          view = {
             width = 35,
