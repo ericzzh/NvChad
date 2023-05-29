@@ -52,6 +52,8 @@ local other_servers = {
   'tsserver',
   'rust_analyzer',
   'clangd',
+  'pyright',
+  'jedi_language_server',
 }
 
 for _, lsp in ipairs(other_servers) do
