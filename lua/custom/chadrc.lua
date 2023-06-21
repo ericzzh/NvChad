@@ -75,7 +75,7 @@ M.plugins = {
              sources = sources,
           }
        end,
-  }
+  },
 }
 
 return M

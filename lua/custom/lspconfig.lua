@@ -54,6 +54,7 @@ local other_servers = {
   'clangd',
   'pyright',
   'jedi_language_server',
+  'jdtls',
 }
 
 for _, lsp in ipairs(other_servers) do
